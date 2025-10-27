@@ -1,0 +1,12 @@
+# --- Core ---
+pandas
+numpy
+
+# --- Visualization ---
+matplotlib
+seaborn
+plotly
+
+# --- Modeling ---
+scikit-learn
+statsmodels
