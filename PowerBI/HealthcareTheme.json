@@ -1,0 +1,7 @@
+{
+  "name": "Healthcare Blue White Base",
+  "dataColors": ["#1E4DB7","#2F80ED","#60A5FA","#0EA5E9","#16A34A","#E11D48","#F59E0B"],
+  "background": "#FFFFFF",
+  "foreground": "#1F2937",
+  "tableAccent": "#1E4DB7"
+}
