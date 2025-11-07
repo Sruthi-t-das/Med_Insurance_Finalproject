@@ -41,7 +41,7 @@ Focus: combine **demographic + lifestyle + health** factors to predict yearly me
 - **Dashboards:** **Power BI** (interactive exploration & risk segmentation)  
 - **App:** **Streamlit** for showcasing predictions (prototype) 
 
-![alt text](image.png)
+![alt text](C:\Users\sruth\Documents\Greenbootcamps\Med_Insurance_Finalproject\Images\image.png)
 ---
 
 ## 🧪 Methodology
