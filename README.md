@@ -1,62 +1,105 @@
-🟨 Day 1 — Data Familiarity
+# Health Insurance Cost Analysis — U.S. Market Entry Support
 
-Goal:
-Understand dataset structure, quality, and early cost drivers before deeper EDA.
+**Author:** Sruthi Thulasi Das  
+**Role:** Aspiring Data Analyst | Web Developer  
+**Focus:** Data Analytics roles in Germany  
+**Connect:** [LinkedIn](https://www.linkedin.com/in/sruthi-thulasi-das-547103152/) • [GitHub](https://github.com/Sruthi-t-das)
 
-Tasks Completed
+---
 
-Created virtual environment and installed dependencies (pandas, numpy, matplotlib, seaborn, scikit-learn).
+## 📌 Project Overview
+This project analyzes **U.S. medical insurance costs** to identify key cost drivers and support **risk‑based premium pricing** for a potential market entry by *Allianz Germany*. The work combines **EDA**, **dashboard (Power BI)**, and **predictive modeling (Linear Regression, XGBoost)** to deliver actionable insights for **pricing and underwriting**.
 
-Loaded dataset (medical_insurance.csv) and inspected shape → (100 000 × 54).
+### Stakeholder & Goal
+- **Stakeholder:** Allianz Germany — *Pricing & Underwriting Team*  
+- **Goal:** Design **fair and competitive premiums** that reflect health and demographic risk, **avoid underpricing** high‑risk profiles (smokers, obesity, chronic disease), and **attract low‑risk customers** with competitive offers. 
 
-Checked data types, missing values, and duplicates — minimal issues.
+---
 
-Cleaned columns (standardized names, handled missing categorical values).
+## 🧠 Hypotheses
+1. **Smoking** significantly increases annual medical cost.  
+2. **Higher BMI** leads to higher annual medical cost.   
+3. **Age** is positively correlated with cost.   
+4. **Chronic disease count** increases cost.   
+5. **Hospitalizations (past 3 years)** increase cost. 
 
-Generated numeric distributions and categorical counts to explore value ranges.
+---
 
-Created derived features:
+## 📊 Dataset
+- **Source:** U.S. Medical Insurance dataset  
+- **Size:** **100,000** records  
+- **Features:** **7** attributes (demographics, lifestyle, and health indicators)  
+- **Target:** `annual_medical_cost`  
+Focus: combine **demographic + lifestyle + health** factors to predict yearly medical cost. 
 
-bmi_band (Underweight → Obese II+)
+> 
 
-age_band (<25 → 65+)
+---
 
-Analyzed early cost signals by smoker, BMI, age, and region.
+## 🛠️ Tools & Tech
+- **Python** (EDA & Modeling): pandas, numpy, scikit‑learn, matplotlib/xgboost  
+- **Dashboards:** **Power BI** (interactive exploration & risk segmentation)  
+- **App:** **Streamlit** for showcasing predictions (prototype) 
 
-Confirmed smokers and high-BMI groups drive higher medical expenses.
+![alt text](image.png)
+---
 
-🟨 Day 2 – Exploratory Data Analysis (EDA) & Hypothesis Testing
+## 🧪 Methodology
+1. **EDA & Cleaning**: outlier checks, missing values, feature engineering (e.g., BMI bands).  
+2. **Visualization**: smoker vs non‑smoker costs, BMI bands vs cost, age groups, chronic disease count, hospitalizations.  
+3. **Modeling**:  
+   - **Linear Regression** (baseline): **MAE ≈ 1,430**, **R² ≈ 0.44**.  
+   - **XGBoost** (advanced): **MAE ≈ 943.6**, **R² ≈ 0.631**, capturing non‑linear effects.   
+4. **Interpretation**: **Smoking, BMI, and Chronic Disease Count** emerge as strongest predictors. 
 
-Objective:
-Identify the major factors influencing annual medical cost through exploratory data analysis and statistical testing.
+---
 
-Steps Completed:
+## 🔍 Key Findings
+- **Smoking** is a **dominant cost driver**; smokers show higher median and upper‑quartile costs and more high‑cost outliers.     
+- **BMI** shows a **moderate positive** relationship with cost; variance widens in obese bands → greater unpredictability.     
+- **Age** correlates **positively** with cost; **65+** is the highest‑cost segment.     
+- **Chronic illnesses**: each additional chronic disease substantially **raises** average costs.     
+- **Hospitalizations**: frequent stays drive **sharp cost escalation**.  
 
-Loaded the cleaned dataset from Day 1 and verified data integrity.
+![alt text](image-2.png)
 
-Explored variable distributions (age, BMI, smoker status, chronic count, hospitalizations).
+![alt text](image-4.png)
 
-Created grouped summaries (“early cost signals”) by key drivers.
+---
 
-Visualized relationships using Seaborn and Plotly (boxplots, scatterplots, bar charts).
+## 📈 Dashboard & App
+- **Power BI** dashboard enables filtering by **smoker status, region, age, chronic conditions** and dynamic cost comparisons across risk groups.     
+- **Streamlit** app demonstrates single‑record **cost prediction** and scenario exploration (prototype).   
 
-Formulated and statistically tested five hypotheses using ANOVA and correlation.
+![alt text](image-3.png)
 
-Hypotheses & Results:
+![alt text](image-5.png)
+---
 
-| ID | Hypothesis                                  | Test Used       | Result                               |
-| -- | ------------------------------------------- | --------------- | ------------------------------------ |
-| H1 | Smokers have higher annual medical costs    | ANOVA           | ✅ Significant (p < 0.0001)           |
-| H2 | Higher BMI → higher medical cost            | ANOVA           | ✅ Significant (p < 0.0001)           |
-| H3 | Age is positively related to medical cost   | ANOVA           | ✅ Significant (p < 0.0001)           |
-| H4 | More chronic diseases → higher medical cost | **Correlation** | ✅ Significant (p < 0.0001, r ≈ 0.30) |
-| H5 | More hospitalizations → higher medical cost | **ANOVA**       | ✅ Significant (p < 0.0001)           |
+## 🧭 Recommendations (Pricing & Product)
+- Apply **higher premiums for smokers** with “**Quit & Save**” incentives to encourage cessation.     
+- Use **BMI** as a **moderate** risk factor and add **wellness discounts** for healthy weight maintenance.     
+- Implement **age‑tiered pricing** and **senior‑focused** preventive coverage.     
+- Include **chronic‑care management** and **health monitoring** benefits.     
+- Offer **post‑hospital recovery** plans and preventive care initiatives.   
 
+**Market Entry Approach:** Start with **selective premium strategies** to undercut high national averages; focus on **low‑risk segments** initially to build trust & profitability.   
 
-Insights:
+---
 
-Smoking, higher BMI, and older age strongly increase average medical expenses.
+## 📂 Suggested Repository Structure
+```
+├── data/                     # (optional) raw/processed data or data loading script
+├── notebooks/                # EDA & modeling notebooks
+├── src/                      # python package for data prep & models
+│   ├── data_prep.py
+│   ├── features.py
+│   ├── train_linear.py
+│   └── train_xgb.py
+├── app/                      # streamlit app
+│   └── app.py
+├── dashboards/               # Power BI files (.pbix) or exports
+├── assets/                   # images for README (charts, dashboard screenshots)
+└── README.md
+```
 
-Chronic disease count and hospitalization frequency are key cost amplifiers.
-
-All tested hypotheses were statistically supported, confirming primary cost drivers for modeling.
