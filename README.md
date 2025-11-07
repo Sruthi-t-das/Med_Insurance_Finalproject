@@ -41,7 +41,7 @@ Focus: combine **demographic + lifestyle + health** factors to predict yearly me
 - **Dashboards:** **Power BI** (interactive exploration & risk segmentation)  
 - **App:** **Streamlit** for showcasing predictions (prototype) 
 
-![alt text](C:\Users\sruth\Documents\Greenbootcamps\Med_Insurance_Finalproject\Images\image.png)
+![alt text](Images/image.png)
 ---
 
 ## 🧪 Methodology
@@ -61,9 +61,9 @@ Focus: combine **demographic + lifestyle + health** factors to predict yearly me
 - **Chronic illnesses**: each additional chronic disease substantially **raises** average costs.     
 - **Hospitalizations**: frequent stays drive **sharp cost escalation**.  
 
-![alt text](image-2.png)
+![alt text](Images/image-2.png)
 
-![alt text](image-4.png)
+![alt text](Images/image-4.png)
 
 ---
 
@@ -71,9 +71,9 @@ Focus: combine **demographic + lifestyle + health** factors to predict yearly me
 - **Power BI** dashboard enables filtering by **smoker status, region, age, chronic conditions** and dynamic cost comparisons across risk groups.     
 - **Streamlit** app demonstrates single‑record **cost prediction** and scenario exploration (prototype).   
 
-![alt text](image-3.png)
+![alt text](Images/image-3.png)
 
-![alt text](image-5.png)
+![alt text](Images/image-5.png)
 ---
 
 ## 🧭 Recommendations (Pricing & Product)
